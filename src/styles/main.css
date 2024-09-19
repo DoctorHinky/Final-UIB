@@ -11951,7 +11951,7 @@ body {
 }
 
 .hero-button {
-  padding: 20px 40px;
+  padding: 2rem 4rem;
   font-size: 2rem;
   background-color: transparent;
   text-decoration: none;
@@ -11961,6 +11961,7 @@ body {
   overflow: hidden;
   transition: 1s;
   cursor: pointer;
+  width: max-content;
 }
 .hero-button::after {
   content: "";
@@ -11978,7 +11979,7 @@ body {
   margin-left: 100%;
 }
 .hero-button:nth-of-type(2)::after {
-  margin-top: 50%;
+  margin-top: 100%;
 }
 .hero-button:nth-of-type(3)::after {
   margin-left: -100%;
