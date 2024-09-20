@@ -8,9 +8,6 @@
   font-style: normal;
 }
 
-body {
-  background-color: #121212;
-}
 .h1-hero {
   font-size: 10vw;
   color: transparent;
@@ -100,4 +97,133 @@ body {
       border: none;
     }
   }
+}
+
+/* TIMETRAVEL ------------------------------------------------------------------------------------- */
+
+#year1991 {
+  font-family: "Times New Roman", Times, serif;
+  background-color: $light-color;
+  line-height: 1.4;
+  width: 100%;
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  min-height: 100vh;
+
+  div h1 {
+    font-size: 4rem;
+    font-weight: bold;
+  }
+}
+p {
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+.link-1991 {
+  text-decoration: underline;
+  color: blue;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+#year1991 {
+  display: none;
+}
+#linkContainer {
+  background-color: $light-color;
+}
+#startlink {
+  @extend .link-1991;
+  font-size: 6vw;
+  font-family: "Times New Roman", Times, serif;
+}
+#dynamicText {
+  font-family: "Times New Roman", Times, serif;
+  white-space: pre-wrap;
+  display: inline-block;
+}
+
+#year1991 > * {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards 2.5s;
+
+  &:nth-child(1) {
+    animation-delay: 0.5s;
+  }
+  &:nth-child(2) {
+    animation-delay: 6s;
+  }
+  &:nth-child(3) {
+    animation-delay: 6.5s;
+  }
+  &:nth-child(4) {
+    animation-delay: 7s;
+  }
+  &:nth-child(5) {
+    animation-delay: 7.5s;
+  }
+  &:nth-child(6) {
+    animation-delay: 8s;
+  }
+  &:nth-child(7) {
+    animation-delay: 8.5s;
+  }
+  &:nth-child(8) {
+    animation-delay: 9s;
+  }
+  &:nth-child(9) {
+    animation-delay: 9.5s;
+  }
+  &:nth-child(10) {
+    animation-delay: 10s;
+  }
+  &:nth-child(11) {
+    animation-delay: 10.5s;
+  }
+  &:nth-child(12) {
+    animation-delay: 11s;
+  }
+  &:nth-child(13) {
+    animation-delay: 11.5s;
+  }
+  &:nth-child(14) {
+    animation-delay: 12s;
+  }
+  &:nth-child(15) {
+    animation-delay: 12.5s;
+  }
+  &:nth-child(16) {
+    animation-delay: 13s;
+  }
+  &:nth-child(17) {
+    animation-delay: 13.5s;
+  }
+  &:nth-child(18) {
+    animation-delay: 14s;
+  }
+  &:nth-child(19) {
+    animation-delay: 14.5s;
+  }
+  &:nth-child(20) {
+    animation-delay: 15s;
+  }
+  &:nth-child(21) {
+    animation-delay: 15.5s;
+  }
+  &:nth-child(22) {
+    animation-delay: 16s;
+  }
+  &:nth-child(23) {
+    animation-delay: 16.5s;
+  }
+}
+
+/* 1995 ------------------------------------------------------------------------------------- */
+
+#year1995 {
+  height: 100vh;
+  background: url("../assets/imgages/windows-95.webp") no-repeat center center /
+    cover;
 }

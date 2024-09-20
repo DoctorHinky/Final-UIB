@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "sass-watch": "sass --watch src/styles/scss/main.scss:src/styles/main.css",
-    "start": "live-server src",
+    "start": "live-server src/pages/timetravel.html",
     "all": "run-p start sass-watch"
   },
   "keywords": [

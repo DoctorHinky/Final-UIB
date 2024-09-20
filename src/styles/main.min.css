@@ -11894,16 +11894,13 @@ textarea.form-control-lg {
     opacity: 1;
   }
 }
+@keyframes audio {}
 @font-face {
   font-family: "Roboto";
   src: url(../../assets/fonts/Roboto-Regular.ttf) format("truetype");
   font-weight: normal;
   font-style: normal;
 }
-body {
-  background-color: #121212;
-}
-
 .h1-hero {
   font-size: 10vw;
   color: transparent;
@@ -11990,6 +11987,29 @@ body {
 .hero-button:hover::after {
   margin: 0;
   border: none;
+}
+
+/* TIMETRAVEL ------------------------------------------------------------------------------------- */
+#year1991 {
+  font-family: "Times New Roman", Times, serif;
+  background-color: rgb(189, 189, 189);
+  line-height: 1.4;
+}
+#year1991 div h1, #year1991 div .h1 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+.link-1991 {
+  text-decoration: underline;
+  color: blue;
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 
 /*# sourceMappingURL=main.min.css.map */
