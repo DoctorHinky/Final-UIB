@@ -1,4 +1,4 @@
-const btn = document.getElementById("startlink");
+/* const btn = document.getElementById("startlink");
 const audio = new Audio("../assets/audio/modem_Sound.mp3");
 const startlink = document.getElementById("linkContainer");
 const year1991 = document.getElementById("year1991");
@@ -23,6 +23,21 @@ btn.addEventListener("click", () => {
       setTimeout(type, speed);
     }
   }
-
   type();
-});
+}); */
+
+function closeMe(index) {
+  const popUp = document.getElementById(index);
+  popUp.style.display = "none";
+}
+
+const pops = document.getElementsByClassName("popups");
+console.log(pops);
+
+function openPops() {
+  for (let i = 0; i < pops.length; i++) {
+    setTimeout(() => {
+      pops[i].style.display = "block";
+    }, i * 100);
+  }
+}

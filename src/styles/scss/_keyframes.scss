@@ -49,13 +49,9 @@
     opacity: 1;
   }
 }
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
+@keyframes blink {
   50% {
-    border-color: black;
+    color: rgb(255, 129, 129);
   }
 }
 @keyframes fadeIn {
@@ -66,5 +62,13 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+@keyframes falldown {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(2500px);
   }
 }

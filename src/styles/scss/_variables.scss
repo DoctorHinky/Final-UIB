@@ -1,2 +1,19 @@
 $font-family-base: "Roboto", sans-serif;
 $light-color: #e0e0e0;
+$bc-of-95: #c0c0c0;
+$light-grey-95: #d4d0c8;
+$border-95: #a0a0a0;
+$blue-95: #000080;
+$hover-95: #b0b0b0;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

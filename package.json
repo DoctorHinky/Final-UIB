@@ -20,5 +20,8 @@
     "live-server": "^1.2.1",
     "npm-run-all": "^4.1.5",
     "sass": "^1.78.0"
+  },
+  "dependencies": {
+    "font-awesome": "^4.7.0"
   }
 }
