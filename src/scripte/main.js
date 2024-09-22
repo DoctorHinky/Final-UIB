@@ -41,3 +41,24 @@ function openPops() {
     }, i * 100);
   }
 }
+
+/* Bild dunkel machen 2010 */
+
+const button = document.getElementById("darkenButton");
+const year2010 = document.getElementById("year2010");
+
+function lightOut() {
+  year2010.style.opacity = "0";
+  year2010.overflow = "hidden";
+  document.body.style.backgroundColor = "black";
+  document.body.overflow = "hidden";
+
+  console.log("light out");
+
+  setTimeout(() => {
+    year2010.style.opacity = "1";
+    year2010.overflow = "";
+    document.body.style.backgroundColor = "";
+    document.body.overflow = "";
+  }, 7000);
+}

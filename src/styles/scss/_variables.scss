@@ -5,6 +5,41 @@ $light-grey-95: #d4d0c8;
 $border-95: #a0a0a0;
 $blue-95: #000080;
 $hover-95: #b0b0b0;
+$white: #ffffff;
+
+$fb-blue: #3b5998;
+$fb-light-gray-blue: #e9ebee;
+$fb-alice-blue: #f0f8ff;
+$fb-dark-gray: #333333;
+$fb-blue-hover: #365492;
+$fb-link-color: #0000ff;
+$fb-link-hover-color: #ff0000;
+$fb-red: #ff6347;
+$fb-orange-red: #ff4500;
+$fb-gray-border: #ccc;
+$fb-gray-background: #f7f7f7;
+
+$orange-start: #ffa500;
+$orange-end: #ff8c00;
+$dark-gray: #333333;
+$light-gray: #f2f2f2;
+$hover-orange: #ffcc66;
+
+$border-color-b10: #d1d1d1;
+$header-bg-color-b10: #f1f1f1;
+$button-bg-color-b10: #ffffff;
+$content-bg-color-10: #ffffff;
+$shadow-color-b10: rgba(0, 0, 0, 0.2);
+$address-bar-bg-b10: #e3e3e3;
+$tab-bg-color-b10: #f1f1f1;
+
+$bg-dark-24: #2e2e2e;
+$bg-light-24: #3c3c3c;
+$bg-input-24: #4a4a4a;
+$color-text-24: #e5e5e5;
+$border-radius-24: 8px;
+$icon-size-24: 16px;
+$font-size-24: 14px;
 
 @mixin flex-center {
   display: flex;
@@ -16,4 +51,18 @@ $hover-95: #b0b0b0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@mixin button-style-FB-05($bg-color, $hover-color, $text-color: $white) {
+  background-color: $bg-color;
+  color: $text-color;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 12px 24px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $hover-color;
+  }
 }
