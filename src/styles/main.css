@@ -540,6 +540,89 @@
   opacity: 1;
 }
 
+#Grundstein {
+  background-color: #333;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  text-align: center;
+}
+#Grundstein header h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+#Grundstein .heroContainer {
+  width: 60%;
+  margin: 10% auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#Grundstein .heroContainer img {
+  width: 300px;
+  height: auto;
+  margin: 10px 0;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+#Grundstein .heroContainer img:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+#Grundstein .heroContainer p {
+  margin: 20px 0;
+  line-height: 1.6;
+  width: 30%;
+  font-size: 1.5em;
+}
+#Grundstein main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#Grundstein .milestone {
+  background: #333;
+  border-radius: 15px;
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+  margin: 15px 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+#Grundstein .milestone:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+#Grundstein .milestone::before {
+  content: "";
+  position: absolute;
+  top: -30%;
+  left: 0;
+  right: 0;
+  height: 70%;
+  background: rgba(255, 255, 255, 0.1);
+  opacity: 0.5;
+  transform: skewY(-10deg);
+  pointer-events: none;
+}
+#Grundstein .milestone h3 {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+#Grundstein .milestone p {
+  line-height: 1.6;
+}
+@media (max-width: 768px) {
+  #Grundstein .milestone {
+    padding: 15px;
+  }
+}
+
 @font-face {
   font-family: "Roboto";
   src: url(../assets/fonts/Roboto-Regular.ttf) format("truetype");
@@ -847,7 +930,7 @@ p {
   width: 20px;
   height: 20px;
   border: 2px solid #808080;
-  box-shadow: inset 1px 1px 0 #ffffff, inset -1px -1px 0 #808080;
+  box-shadow: inset 1px 1px 0 #fff, inset -1px -1px 0 #808080;
   background-color: #a0a0a0;
   display: inline-block;
   color: black;
@@ -858,7 +941,7 @@ p {
   background-color: #ff8989;
 }
 .controls:active, .menu-icons:active, .winCon:active {
-  box-shadow: inset -1px -1px 0 #ffffff, inset 1px 1px 0 #808080;
+  box-shadow: inset -1px -1px 0 #fff, inset 1px 1px 0 #808080;
   background-color: #c0c0c0;
 }
 
@@ -1098,7 +1181,7 @@ p {
 
 .ad-banner {
   background-color: #ff6347;
-  color: #ffffff;
+  color: #fff;
   text-align: center;
   padding: 15px;
   margin: 20px 0;
@@ -1124,7 +1207,7 @@ p {
 
 .ad-banner-sidebar {
   background-color: #ff4500;
-  color: #ffffff;
+  color: #fff;
   text-align: center;
   padding: 10px;
   margin: 15px 0;
@@ -1410,14 +1493,14 @@ button {
   margin: 0;
   padding: 30px;
   box-sizing: border-box;
-  background-color: #ffffff;
+  background-color: #fff;
   font-family: Arial, sans-serif;
   color: #333333;
 }
 
 .header-FB-05 {
   background-color: #3b5998;
-  color: #ffffff;
+  color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1429,7 +1512,7 @@ button {
 }
 .header-FB-05 .menu-FB-05 a {
   margin: 0 15px;
-  color: #ffffff;
+  color: #fff;
   text-decoration: underline;
   font-size: 20px;
 }
@@ -1515,7 +1598,7 @@ button {
 }
 .content-FB-05 .main-content-FB-05 .status-update-FB-05 button {
   background-color: #3b5998;
-  color: #ffffff;
+  color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -1559,7 +1642,7 @@ button {
   text-align: center;
   padding: 20px;
   background-color: #3b5998;
-  color: #ffffff;
+  color: #fff;
   margin-top: 40px;
   border-top: 1px solid #ccc;
 }
@@ -1567,7 +1650,7 @@ button {
   margin: 10px 0;
 }
 .footer-FB-05 p a {
-  color: #ffffff;
+  color: #fff;
   text-decoration: underline;
   margin: 0 15px;
   font-size: 18px;
@@ -1635,7 +1718,7 @@ button {
 .Klatschblatt05-header .Klatschblatt05-logo {
   font-size: 36px;
   font-weight: bold;
-  color: #ffffff;
+  color: #fff;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   animation: Klatschblatt05-logo-flash 2s infinite alternate;
 }
@@ -1650,7 +1733,7 @@ button {
 }
 .Klatschblatt05-header .Klatschblatt05-nav ul li a {
   text-decoration: underline;
-  color: #ffffff;
+  color: #fff;
   font-size: 20px;
   transition: color 0.3s ease;
 }
@@ -1671,7 +1754,7 @@ button {
 }
 .Klatschblatt05-content .Klatschblatt05-top-stories .Klatschblatt05-story {
   display: flex;
-  background-color: #ffffff;
+  background-color: #fff;
   border: 2px dashed #ff8c00;
   border-radius: 10px;
   overflow: hidden;
@@ -1702,7 +1785,7 @@ button {
 }
 .Klatschblatt05-content .Klatschblatt05-top-stories .Klatschblatt05-story-text a {
   background-color: #ff8c00;
-  color: #ffffff;
+  color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -1722,7 +1805,7 @@ button {
 }
 .Klatschblatt05-content .Klatschblatt05-articles .Klatschblatt05-article {
   display: flex;
-  background-color: #ffffff;
+  background-color: #fff;
   border: 2px solid #ff8c00;
   border-radius: 10px;
   overflow: hidden;
@@ -1752,7 +1835,7 @@ button {
 }
 .Klatschblatt05-content .Klatschblatt05-articles .Klatschblatt05-article-text a {
   background-color: #ff8c00;
-  color: #ffffff;
+  color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -1767,7 +1850,7 @@ button {
 .Klatschblatt05-content .Klatschblatt05-ad-banner {
   width: 100%;
   background-color: rgba(255, 140, 0, 0.8);
-  color: #ffffff;
+  color: #fff;
   text-align: center;
   padding: 20px;
   border-radius: 10px;
@@ -1820,7 +1903,7 @@ button {
 }
 .Klatschblatt05-footer {
   background: linear-gradient(to bottom, #ff8c00, #ffa500);
-  color: #ffffff;
+  color: #fff;
   text-align: center;
   padding: 20px;
   margin-top: 40px;
@@ -1832,7 +1915,7 @@ button {
   font-size: 18px;
 }
 .Klatschblatt05-footer p a {
-  color: #ffffff;
+  color: #fff;
   text-decoration: underline;
   margin: 0 15px;
   transition: color 0.3s ease;
@@ -1945,13 +2028,13 @@ button {
 }
 .browser-window-b10 .tab-bar-b10 {
   display: flex;
-  background-color: #ffffff;
+  background-color: #fff;
   padding: 5px;
 }
 .browser-window-b10 .tab-bar-b10 .tab-b10 {
   padding: 5px 10px;
   margin-right: 5px;
-  background-color: #ffffff;
+  background-color: #fff;
   border: 1px solid #ccc;
   cursor: pointer;
 }
@@ -2589,7 +2672,7 @@ button {
   min-height: 100vh;
   position: fixed;
   top: 0;
-  color: #ffffff;
+  color: #fff;
 }
 #end div {
   width: 60%;
