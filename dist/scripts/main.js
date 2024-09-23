@@ -2,6 +2,7 @@ const sound1991 = new Audio("../assets/audio/modem_Sound.mp3");
 const sound1995 = new Audio("../assets/audio/win95.mp3");
 const sound2000 = new Audio("../assets/audio/win00.mp3");
 const sound2005 = new Audio("../assets/audio/win05.mp3");
+const sound2010 = new Audio("../assets/audio/win10.mp3");
 
 const year1991 = document.getElementById("year1991");
 const year1995 = document.getElementById("year1995");
@@ -67,11 +68,21 @@ function spawn2005() {
   sound2005.play();
 
   year2005.style.display = "block";
-  year2005.style.transform = "scale(0.5)";
   year2005.style.transition = "2s";
+}
+
+function spawn2010() {
+  year2005.style.display = "none";
+  sound2010.play();
+
+  year2010.style.display = "block";
+  year2010.style.opacity = "0";
+  year2010.style.transition = "2s";
+  year2010.style.transform = "tranlateX(100px)";
 
   setTimeout(() => {
-    year2005.style.transform = "scale(1)";
+    year2010.style.opacity = "1";
+    year2010.style.transform = "tranlateX(0)";
   }, 1000);
 }
 
@@ -130,8 +141,7 @@ function timeTravel() {
       break;
 
     case 5:
-      document.getElementById("year2005").style.display = "none";
-      document.getElementById("year2010").style.display = "block";
+      spawn2010();
       timeButton.classList.add("buttonHeute");
       timeButton.classList.remove("button2010");
       break;
