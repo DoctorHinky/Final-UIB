@@ -282,51 +282,6 @@
   transform: translateY(1px);
 }
 
-.buttonHeute {
-  padding: 16px 32px;
-  background: rgba(255, 255, 255, 0.15);
-  color: #fff;
-  font-family: "Roboto", sans-serif;
-  font-size: 3rem;
-  text-transform: uppercase;
-  border: none;
-  border-radius: 50px;
-  text-align: center;
-  display: inline-block;
-  cursor: pointer;
-  transition: all 0.4s ease;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25), inset 0 0 4px rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  position: relative;
-  overflow: hidden;
-}
-.buttonHeute:hover {
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35), inset 0 0 8px rgba(255, 255, 255, 0.5);
-  transform: translateY(-4px);
-  animation: glow 2s infinite alternate;
-}
-.buttonHeute:active {
-  background: rgba(255, 255, 255, 0.2);
-  transform: translateY(2px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), inset 0 0 4px rgba(255, 255, 255, 0.4);
-}
-.buttonHeute::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(45deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
-  transform: rotate(45deg);
-  transition: opacity 0.4s ease;
-  opacity: 0;
-}
-.buttonHeute:hover::before {
-  opacity: 1;
-}
-
 @keyframes glow {
   0%, 100% {
     box-shadow: 0 0 8px rgba(255, 255, 255, 0.3), 0 0 16px rgba(255, 255, 255, 0.2);
@@ -335,7 +290,7 @@
     box-shadow: 0 0 16px rgba(255, 255, 255, 0.4), 0 0 32px rgba(255, 255, 255, 0.3);
   }
 }
-.buttonMorgen {
+.buttonHeute {
   padding: 20px 40px;
   font-family: "Roboto", sans-serif;
   font-size: 3rem;
@@ -350,18 +305,18 @@
   box-shadow: 0 0 20px rgba(0, 255, 204, 0.5), inset 0 0 10px rgba(0, 255, 204, 0.5);
   animation: pulseHover 1.5s infinite alternate; /* Pulsierende Animation */
 }
-.buttonMorgen:hover {
+.buttonHeute:hover {
   background: #00f; /* Button wird blau */
   color: #fff; /* Textfarbe wird weiß */
   transform: translateY(-4px);
   box-shadow: 0 0 40px rgb(0, 255, 204), inset 0 0 20px rgb(0, 255, 204);
   animation: pulse 1.5s infinite;
 }
-.buttonMorgen:active {
+.buttonHeute:active {
   transform: translateY(2px);
   box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
 }
-.buttonMorgen::before {
+.buttonHeute::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -374,11 +329,11 @@
   opacity: 0;
   z-index: 0;
 }
-.buttonMorgen:hover::before {
+.buttonHeute:hover::before {
   opacity: 1;
   animation: rotate 1s infinite linear;
 }
-.buttonMorgen::after {
+.buttonHeute::after {
   content: "";
   position: absolute;
   top: 0;
@@ -390,11 +345,11 @@
   transition: opacity 0.4s ease, transform 0.6s ease;
   opacity: 0;
 }
-.buttonMorgen:hover::after {
+.buttonHeute:hover::after {
   opacity: 1;
   transform: rotate(360deg); /* Border dreht sich */
 }
-.buttonMorgen .text {
+.buttonHeute .text {
   position: relative;
   z-index: 1;
   animation: distort 0.5s ease infinite alternate; /* Verzerrungseffekt */
@@ -438,7 +393,7 @@
     transform: translate(2px, -2px) scale(1);
   }
 }
-.buttonEnd {
+.buttonMorgen {
   padding: 20px 40px;
   font-family: "Roboto", sans-serif;
   font-size: 3rem;
@@ -453,15 +408,15 @@
   box-shadow: 0 0 20px rgba(255, 106, 0, 0.5), inset 0 0 10px rgba(238, 9, 121, 0.5);
   animation: fadeIn 1s ease;
 }
-.buttonEnd:hover {
+.buttonMorgen:hover {
   transform: translateY(-5px);
   box-shadow: 0 0 40px rgb(255, 106, 0), inset 0 0 20px rgb(238, 9, 121);
 }
-.buttonEnd:active {
+.buttonMorgen:active {
   transform: translateY(2px);
   box-shadow: 0 0 10px rgba(255, 106, 0, 0.5);
 }
-.buttonEnd::before {
+.buttonMorgen::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -474,11 +429,11 @@
   opacity: 0;
   z-index: 0;
 }
-.buttonEnd:hover::before {
+.buttonMorgen:hover::before {
   opacity: 1;
   animation: rotate 1s infinite linear;
 }
-.buttonEnd::after {
+.buttonMorgen::after {
   content: "";
   position: absolute;
   top: 0;
@@ -490,11 +445,11 @@
   transition: opacity 0.4s ease;
   opacity: 0;
 }
-.buttonEnd:hover::after {
+.buttonMorgen:hover::after {
   opacity: 1;
   animation: pulse 0.5s infinite alternate;
 }
-.buttonEnd .text {
+.buttonMorgen .text {
   position: relative;
   z-index: 1;
   animation: distort 0.5s ease infinite alternate; /* Verzerrungseffekt */
@@ -540,6 +495,51 @@
     transform: translate(2px, -2px) scale(1);
   }
 }
+.buttonEnd {
+  padding: 16px 32px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 3rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 50px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25), inset 0 0 4px rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+.buttonEnd:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35), inset 0 0 8px rgba(255, 255, 255, 0.5);
+  transform: translateY(-4px);
+  animation: glow 2s infinite alternate;
+}
+.buttonEnd:active {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), inset 0 0 4px rgba(255, 255, 255, 0.4);
+}
+.buttonEnd::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+  transform: rotate(45deg);
+  transition: opacity 0.4s ease;
+  opacity: 0;
+}
+.buttonEnd:hover::before {
+  opacity: 1;
+}
+
 @font-face {
   font-family: "Roboto";
   src: url(../assets/fonts/Roboto-Regular.ttf) format("truetype");
@@ -1867,6 +1867,12 @@ button {
 }
 
 /*  year 2010 ... ------ ___ ...................::,,,,,,,,,,,,,,,,, */
+.browser-header-b10, .browser-header-T-day {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
 .browser-window-b10 {
   width: 100vw;
   min-height: 100vh;
@@ -2578,6 +2584,38 @@ button {
     grid-template-columns: 1fr;
   }
 }
+#end {
+  background: linear-gradient(45deg, #0a0f29, #1c1f2e, #2b2f35, #3b3f45, #1c1f2e);
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  color: #ffffff;
+}
+#end div {
+  width: 60%;
+  padding: 2rem 2em 10rem 2em;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+  transition: box-shadow 0.3s ease;
+  margin: 20vh auto;
+}
+#end div:hover {
+  box-shadow: 0 15px 40px rgba(255, 255, 255, 0.3);
+}
+#end p {
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+#end p:nth-of-type(1) {
+  transition-delay: opacity 1s;
+}
+#end p:nth-of-type(2) {
+  transition-delay: opacity 2s;
+}
+#end p:nth-of-type(3) {
+  transition-delay: opacity 3s;
+}
+
 /* display none for all */
 #year1991,
 #year1995,
@@ -2585,7 +2623,8 @@ button {
 #year2005,
 #year2010,
 #today,
-#morgen {
+#morgen,
+#end {
   display: none;
 }
 

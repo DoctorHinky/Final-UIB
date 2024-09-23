@@ -127,59 +127,6 @@
   }
 }
 
-.buttonHeute {
-  padding: 16px 32px;
-  background: rgba(255, 255, 255, 0.15);
-  color: #fff;
-  font-family: "Roboto", sans-serif;
-  font-size: 3rem;
-  text-transform: uppercase;
-  border: none;
-  border-radius: 50px;
-  text-align: center;
-  display: inline-block;
-  cursor: pointer;
-  transition: all 0.4s ease;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25),
-    inset 0 0 4px rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  position: relative;
-  overflow: hidden;
-
-  &:hover {
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35),
-      inset 0 0 8px rgba(255, 255, 255, 0.5);
-    transform: translateY(-4px);
-    animation: glow 2s infinite alternate;
-  }
-  &:active {
-    background: rgba(255, 255, 255, 0.2);
-    transform: translateY(2px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2),
-      inset 0 0 4px rgba(255, 255, 255, 0.4);
-  }
-  &::before {
-    content: "";
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(
-      45deg,
-      rgba(255, 255, 255, 0.15),
-      rgba(255, 255, 255, 0.05)
-    );
-    transform: rotate(45deg);
-    transition: opacity 0.4s ease;
-    opacity: 0;
-  }
-  &:hover::before {
-    opacity: 1;
-  }
-}
-
 @keyframes glow {
   0%,
   100% {
@@ -192,7 +139,7 @@
   }
 }
 
-.buttonMorgen {
+.buttonHeute {
   padding: 20px 40px;
   font-family: "Roboto", sans-serif;
   font-size: 3rem;
@@ -312,7 +259,7 @@
   }
 }
 
-.buttonEnd {
+.buttonMorgen {
   padding: 20px 40px;
   font-family: "Roboto", sans-serif;
   font-size: 3rem;
@@ -432,5 +379,58 @@
   }
   100% {
     transform: translate(2px, -2px) scale(1);
+  }
+}
+
+.buttonEnd {
+  padding: 16px 32px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 3rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 50px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25),
+    inset 0 0 4px rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35),
+      inset 0 0 8px rgba(255, 255, 255, 0.5);
+    transform: translateY(-4px);
+    animation: glow 2s infinite alternate;
+  }
+  &:active {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2),
+      inset 0 0 4px rgba(255, 255, 255, 0.4);
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.15),
+      rgba(255, 255, 255, 0.05)
+    );
+    transform: rotate(45deg);
+    transition: opacity 0.4s ease;
+    opacity: 0;
+  }
+  &:hover::before {
+    opacity: 1;
   }
 }

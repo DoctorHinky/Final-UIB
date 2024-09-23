@@ -1429,7 +1429,9 @@ $active-tab-bg-b10: #d1d1d1;
 $control-color-b10: #c0c0c0;
 
 .browser-header-b10 {
-  @extend .browser-header-b10;
+  position: sticky;
+  top: 0;
+  z-index: 5;
 }
 
 .browser-window-b10 {
@@ -2294,6 +2296,47 @@ $shadow-color-tmr: rgba(0, 255, 255, 0.5);
   }
 }
 
+#end {
+  background: linear-gradient(
+    45deg,
+    #0a0f29,
+    #1c1f2e,
+    #2b2f35,
+    #3b3f45,
+    #1c1f2e
+  );
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  color: $white;
+
+  div {
+    width: 60%;
+    padding: 2rem 2em 10rem 2em;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+    transition: box-shadow 0.3s ease;
+    margin: 20vh auto;
+
+    &:hover {
+      box-shadow: 0 15px 40px rgba(255, 255, 255, 0.3);
+    }
+  }
+  p {
+    font-size: 1.2rem;
+    font-weight: normal;
+    &:nth-of-type(1) {
+      transition-delay: opacity 1s;
+    }
+    &:nth-of-type(2) {
+      transition-delay: opacity 2s;
+    }
+    &:nth-of-type(3) {
+      transition-delay: opacity 3s;
+    }
+  }
+}
+
 /* display none for all */
 #year1991,
 #year1995,
@@ -2301,6 +2344,7 @@ $shadow-color-tmr: rgba(0, 255, 255, 0.5);
 #year2005,
 #year2010,
 #today,
-#morgen {
+#morgen,
+#end {
   display: none;
 }

@@ -1,8 +1,9 @@
 const sound1991 = new Audio("../assets/audio/modem_Sound.mp3");
 const sound1995 = new Audio("../assets/audio/win95.mp3");
 const sound2000 = new Audio("../assets/audio/win00.mp3");
-const sound2005 = new Audio("../assets/audio/win05.mp3");
-const sound2010 = new Audio("../assets/audio/win10.mp3");
+const sound2005 = new Audio("../assets/audio/winXP.mp3");
+const sound2010 = new Audio("../assets/audio/win7.mp3");
+const soundToday = new Audio("../assets/audio/win10.mp3");
 
 const year1991 = document.getElementById("year1991");
 const year1995 = document.getElementById("year1995");
@@ -86,6 +87,45 @@ function spawn2010() {
   }, 1000);
 }
 
+function spawnToday() {
+  year2010.style.display = "none";
+  soundToday.play();
+
+  today.style.display = "block";
+  today.style.opacity = "0";
+  today.style.transition = "2s";
+  today.style.transform = "tranlateX(100px)";
+
+  setTimeout(() => {
+    today.style.opacity = "1";
+    today.style.transform = "tranlateX(0)";
+  }, 1000);
+}
+
+function spawnMorgen() {
+  today.style.display = "none";
+  morgen.style.display = "block";
+
+  morgen.style.opacity = "0";
+  morgen.style.transition = "1s";
+
+  setTimeout(() => {
+    morgen.style.opacity = "1";
+  }, 1000);
+}
+
+function spawnEnd() {
+  morgen.style.display = "none";
+  end.style.display = "block";
+
+  end.style.opacity = "0";
+  end.style.transition = "1s";
+
+  setTimeout(() => {
+    end.style.opacity = "1";
+  }, 1000);
+}
+
 /* button function */
 
 const timeButton = document.getElementById("timeButton");
@@ -147,20 +187,24 @@ function timeTravel() {
       break;
 
     case 6:
-      document.getElementById("year2010").style.display = "none";
-      document.getElementById("today").style.display = "block";
+      spawnToday();
       timeButton.classList.add("buttonMorgen");
       timeButton.classList.remove("buttonHeute");
       break;
 
     case 7:
-      document.getElementById("today").style.display = "none";
-      document.getElementById("morgen").style.display = "block";
+      spawnMorgen();
       timeButton.classList.add("buttonEnd");
       timeButton.classList.remove("buttonMorgen");
       break;
 
-    default:
+    case 8:
+      spawnEnd();
+      timeButton.textContent = "Das ende deiner Reise";
+      timeButton.onclick = () => (window.location.href = "../index.html");
+      timeButton.style.bottom = "10%";
+      timeButton.style.left = "50%";
+      timeButton.style.transform = "translateX(-50%)";
       break;
   }
 }
