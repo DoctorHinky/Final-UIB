@@ -1,6 +1,5 @@
 @charset "UTF-8";
 @import "./../../../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
-@import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 @keyframes fadeSide {
   from {
     margin-left: 40px;
@@ -640,8 +639,18 @@ body {
 }
 
 /* HERO PAGE ---------------------------------------------------------------------- */
+.index-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  margin-top: 3rem;
+  background: #000;
+}
+
 .h1-hero {
   font-size: 10vw;
+  text-align: center;
   color: transparent;
   background: linear-gradient(to left, #7373ff, #00ff00);
   background-clip: text;
@@ -668,14 +677,22 @@ body {
   opacity: 0.6;
 }
 
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 80vw;
+}
+
 .hero-p {
   color: white;
-  font-size: 24px;
+  font-size: 1.25rem;
   width: 60%;
-  padding: 2rem;
+  padding: 3rem;
 }
 .hero-p span:first-of-type {
   animation: fadeSide 1s linear;
+  margin-bottom: 1rem;
 }
 .hero-p b, .hero-p #startlink {
   opacity: 0;
@@ -689,6 +706,7 @@ body {
 }
 
 .hero-button {
+  text-align: center;
   padding: 2rem 4rem;
   font-size: 2rem;
   background-color: transparent;
@@ -699,6 +717,7 @@ body {
   overflow: hidden;
   transition: 1s;
   cursor: pointer;
+  margin-bottom: 3rem;
   width: max-content;
 }
 .hero-button::after {
@@ -730,6 +749,22 @@ body {
   border: none;
 }
 
+@media (max-width: 412px) {
+  .index-body {
+    margin-top: 0.25rem;
+  }
+  .hero-button {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .index-body {
+    margin-top: 0.25rem;
+  }
+  .hero-button {
+    width: 48%;
+  }
+}
 /* TIMETRAVEL ------------------------------------------------------------------------------------- */
 #year1991 {
   font-family: "Times New Roman", Times, serif;
