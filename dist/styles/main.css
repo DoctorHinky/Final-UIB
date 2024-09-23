@@ -282,51 +282,6 @@
   transform: translateY(1px);
 }
 
-.buttonHeute {
-  padding: 16px 32px;
-  background: rgba(255, 255, 255, 0.15);
-  color: #fff;
-  font-family: "Roboto", sans-serif;
-  font-size: 3rem;
-  text-transform: uppercase;
-  border: none;
-  border-radius: 50px;
-  text-align: center;
-  display: inline-block;
-  cursor: pointer;
-  transition: all 0.4s ease;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25), inset 0 0 4px rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  position: relative;
-  overflow: hidden;
-}
-.buttonHeute:hover {
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35), inset 0 0 8px rgba(255, 255, 255, 0.5);
-  transform: translateY(-4px);
-  animation: glow 2s infinite alternate;
-}
-.buttonHeute:active {
-  background: rgba(255, 255, 255, 0.2);
-  transform: translateY(2px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), inset 0 0 4px rgba(255, 255, 255, 0.4);
-}
-.buttonHeute::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(45deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
-  transform: rotate(45deg);
-  transition: opacity 0.4s ease;
-  opacity: 0;
-}
-.buttonHeute:hover::before {
-  opacity: 1;
-}
-
 @keyframes glow {
   0%, 100% {
     box-shadow: 0 0 8px rgba(255, 255, 255, 0.3), 0 0 16px rgba(255, 255, 255, 0.2);
@@ -335,7 +290,7 @@
     box-shadow: 0 0 16px rgba(255, 255, 255, 0.4), 0 0 32px rgba(255, 255, 255, 0.3);
   }
 }
-.buttonMorgen {
+.buttonHeute {
   padding: 20px 40px;
   font-family: "Roboto", sans-serif;
   font-size: 3rem;
@@ -350,18 +305,18 @@
   box-shadow: 0 0 20px rgba(0, 255, 204, 0.5), inset 0 0 10px rgba(0, 255, 204, 0.5);
   animation: pulseHover 1.5s infinite alternate; /* Pulsierende Animation */
 }
-.buttonMorgen:hover {
+.buttonHeute:hover {
   background: #00f; /* Button wird blau */
   color: #fff; /* Textfarbe wird weiß */
   transform: translateY(-4px);
   box-shadow: 0 0 40px rgb(0, 255, 204), inset 0 0 20px rgb(0, 255, 204);
   animation: pulse 1.5s infinite;
 }
-.buttonMorgen:active {
+.buttonHeute:active {
   transform: translateY(2px);
   box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
 }
-.buttonMorgen::before {
+.buttonHeute::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -374,11 +329,11 @@
   opacity: 0;
   z-index: 0;
 }
-.buttonMorgen:hover::before {
+.buttonHeute:hover::before {
   opacity: 1;
   animation: rotate 1s infinite linear;
 }
-.buttonMorgen::after {
+.buttonHeute::after {
   content: "";
   position: absolute;
   top: 0;
@@ -390,11 +345,11 @@
   transition: opacity 0.4s ease, transform 0.6s ease;
   opacity: 0;
 }
-.buttonMorgen:hover::after {
+.buttonHeute:hover::after {
   opacity: 1;
   transform: rotate(360deg); /* Border dreht sich */
 }
-.buttonMorgen .text {
+.buttonHeute .text {
   position: relative;
   z-index: 1;
   animation: distort 0.5s ease infinite alternate; /* Verzerrungseffekt */
@@ -438,7 +393,7 @@
     transform: translate(2px, -2px) scale(1);
   }
 }
-.buttonEnd {
+.buttonMorgen {
   padding: 20px 40px;
   font-family: "Roboto", sans-serif;
   font-size: 3rem;
@@ -453,15 +408,15 @@
   box-shadow: 0 0 20px rgba(255, 106, 0, 0.5), inset 0 0 10px rgba(238, 9, 121, 0.5);
   animation: fadeIn 1s ease;
 }
-.buttonEnd:hover {
+.buttonMorgen:hover {
   transform: translateY(-5px);
   box-shadow: 0 0 40px rgb(255, 106, 0), inset 0 0 20px rgb(238, 9, 121);
 }
-.buttonEnd:active {
+.buttonMorgen:active {
   transform: translateY(2px);
   box-shadow: 0 0 10px rgba(255, 106, 0, 0.5);
 }
-.buttonEnd::before {
+.buttonMorgen::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -474,11 +429,11 @@
   opacity: 0;
   z-index: 0;
 }
-.buttonEnd:hover::before {
+.buttonMorgen:hover::before {
   opacity: 1;
   animation: rotate 1s infinite linear;
 }
-.buttonEnd::after {
+.buttonMorgen::after {
   content: "";
   position: absolute;
   top: 0;
@@ -490,11 +445,11 @@
   transition: opacity 0.4s ease;
   opacity: 0;
 }
-.buttonEnd:hover::after {
+.buttonMorgen:hover::after {
   opacity: 1;
   animation: pulse 0.5s infinite alternate;
 }
-.buttonEnd .text {
+.buttonMorgen .text {
   position: relative;
   z-index: 1;
   animation: distort 0.5s ease infinite alternate; /* Verzerrungseffekt */
@@ -540,6 +495,134 @@
     transform: translate(2px, -2px) scale(1);
   }
 }
+.buttonEnd {
+  padding: 16px 32px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 3rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 50px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25), inset 0 0 4px rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+.buttonEnd:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35), inset 0 0 8px rgba(255, 255, 255, 0.5);
+  transform: translateY(-4px);
+  animation: glow 2s infinite alternate;
+}
+.buttonEnd:active {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), inset 0 0 4px rgba(255, 255, 255, 0.4);
+}
+.buttonEnd::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+  transform: rotate(45deg);
+  transition: opacity 0.4s ease;
+  opacity: 0;
+}
+.buttonEnd:hover::before {
+  opacity: 1;
+}
+
+#Grundstein {
+  background-color: #333;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  text-align: center;
+}
+#Grundstein header h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+#Grundstein .heroContainer {
+  width: 60%;
+  margin: 10% auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#Grundstein .heroContainer img {
+  width: 300px;
+  height: auto;
+  margin: 10px 0;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+#Grundstein .heroContainer img:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+#Grundstein .heroContainer p {
+  margin: 20px 0;
+  line-height: 1.6;
+  width: 30%;
+  font-size: 1.5em;
+}
+#Grundstein main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#Grundstein .milestone {
+  background: #333;
+  border-radius: 15px;
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+  margin: 15px 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+#Grundstein .milestone:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+#Grundstein .milestone::before {
+  content: "";
+  position: absolute;
+  top: -30%;
+  left: 0;
+  right: 0;
+  height: 70%;
+  background: rgba(255, 255, 255, 0.1);
+  opacity: 0.5;
+  transform: skewY(-10deg);
+  pointer-events: none;
+}
+#Grundstein .milestone h3 {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+#Grundstein .milestone p {
+  line-height: 1.6;
+}
+@media (max-width: 768px) {
+  #Grundstein .milestone {
+    padding: 15px;
+  }
+}
+
 @font-face {
   font-family: "Roboto";
   src: url(../assets/fonts/Roboto-Regular.ttf) format("truetype");
@@ -847,7 +930,7 @@ p {
   width: 20px;
   height: 20px;
   border: 2px solid #808080;
-  box-shadow: inset 1px 1px 0 #ffffff, inset -1px -1px 0 #808080;
+  box-shadow: inset 1px 1px 0 #fff, inset -1px -1px 0 #808080;
   background-color: #a0a0a0;
   display: inline-block;
   color: black;
@@ -858,7 +941,7 @@ p {
   background-color: #ff8989;
 }
 .controls:active, .menu-icons:active, .winCon:active {
-  box-shadow: inset -1px -1px 0 #ffffff, inset 1px 1px 0 #808080;
+  box-shadow: inset -1px -1px 0 #fff, inset 1px 1px 0 #808080;
   background-color: #c0c0c0;
 }
 
@@ -1098,7 +1181,7 @@ p {
 
 .ad-banner {
   background-color: #ff6347;
-  color: #ffffff;
+  color: #fff;
   text-align: center;
   padding: 15px;
   margin: 20px 0;
@@ -1124,7 +1207,7 @@ p {
 
 .ad-banner-sidebar {
   background-color: #ff4500;
-  color: #ffffff;
+  color: #fff;
   text-align: center;
   padding: 10px;
   margin: 15px 0;
@@ -1410,14 +1493,14 @@ button {
   margin: 0;
   padding: 30px;
   box-sizing: border-box;
-  background-color: #ffffff;
+  background-color: #fff;
   font-family: Arial, sans-serif;
   color: #333333;
 }
 
 .header-FB-05 {
   background-color: #3b5998;
-  color: #ffffff;
+  color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1429,7 +1512,7 @@ button {
 }
 .header-FB-05 .menu-FB-05 a {
   margin: 0 15px;
-  color: #ffffff;
+  color: #fff;
   text-decoration: underline;
   font-size: 20px;
 }
@@ -1515,7 +1598,7 @@ button {
 }
 .content-FB-05 .main-content-FB-05 .status-update-FB-05 button {
   background-color: #3b5998;
-  color: #ffffff;
+  color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -1559,7 +1642,7 @@ button {
   text-align: center;
   padding: 20px;
   background-color: #3b5998;
-  color: #ffffff;
+  color: #fff;
   margin-top: 40px;
   border-top: 1px solid #ccc;
 }
@@ -1567,7 +1650,7 @@ button {
   margin: 10px 0;
 }
 .footer-FB-05 p a {
-  color: #ffffff;
+  color: #fff;
   text-decoration: underline;
   margin: 0 15px;
   font-size: 18px;
@@ -1635,7 +1718,7 @@ button {
 .Klatschblatt05-header .Klatschblatt05-logo {
   font-size: 36px;
   font-weight: bold;
-  color: #ffffff;
+  color: #fff;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   animation: Klatschblatt05-logo-flash 2s infinite alternate;
 }
@@ -1650,7 +1733,7 @@ button {
 }
 .Klatschblatt05-header .Klatschblatt05-nav ul li a {
   text-decoration: underline;
-  color: #ffffff;
+  color: #fff;
   font-size: 20px;
   transition: color 0.3s ease;
 }
@@ -1671,7 +1754,7 @@ button {
 }
 .Klatschblatt05-content .Klatschblatt05-top-stories .Klatschblatt05-story {
   display: flex;
-  background-color: #ffffff;
+  background-color: #fff;
   border: 2px dashed #ff8c00;
   border-radius: 10px;
   overflow: hidden;
@@ -1702,7 +1785,7 @@ button {
 }
 .Klatschblatt05-content .Klatschblatt05-top-stories .Klatschblatt05-story-text a {
   background-color: #ff8c00;
-  color: #ffffff;
+  color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -1722,7 +1805,7 @@ button {
 }
 .Klatschblatt05-content .Klatschblatt05-articles .Klatschblatt05-article {
   display: flex;
-  background-color: #ffffff;
+  background-color: #fff;
   border: 2px solid #ff8c00;
   border-radius: 10px;
   overflow: hidden;
@@ -1752,7 +1835,7 @@ button {
 }
 .Klatschblatt05-content .Klatschblatt05-articles .Klatschblatt05-article-text a {
   background-color: #ff8c00;
-  color: #ffffff;
+  color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -1767,7 +1850,7 @@ button {
 .Klatschblatt05-content .Klatschblatt05-ad-banner {
   width: 100%;
   background-color: rgba(255, 140, 0, 0.8);
-  color: #ffffff;
+  color: #fff;
   text-align: center;
   padding: 20px;
   border-radius: 10px;
@@ -1820,7 +1903,7 @@ button {
 }
 .Klatschblatt05-footer {
   background: linear-gradient(to bottom, #ff8c00, #ffa500);
-  color: #ffffff;
+  color: #fff;
   text-align: center;
   padding: 20px;
   margin-top: 40px;
@@ -1832,7 +1915,7 @@ button {
   font-size: 18px;
 }
 .Klatschblatt05-footer p a {
-  color: #ffffff;
+  color: #fff;
   text-decoration: underline;
   margin: 0 15px;
   transition: color 0.3s ease;
@@ -1867,6 +1950,12 @@ button {
 }
 
 /*  year 2010 ... ------ ___ ...................::,,,,,,,,,,,,,,,,, */
+.browser-header-b10 {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
 .browser-window-b10 {
   width: 100vw;
   min-height: 100vh;
@@ -1939,13 +2028,13 @@ button {
 }
 .browser-window-b10 .tab-bar-b10 {
   display: flex;
-  background-color: #ffffff;
+  background-color: #fff;
   padding: 5px;
 }
 .browser-window-b10 .tab-bar-b10 .tab-b10 {
   padding: 5px 10px;
   margin-right: 5px;
-  background-color: #ffffff;
+  background-color: #fff;
   border: 1px solid #ccc;
   cursor: pointer;
 }
@@ -2097,6 +2186,12 @@ button {
 }
 
 /* Today ------------------------------------------------------------.......................................-------------------- */
+.chrome24-browser {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
 .chrome24-browser {
   width: 100%;
   background: #2e2e2e;
@@ -2485,7 +2580,7 @@ button {
 .futuristic-news-tmr .header-tmr .logo-tmr {
   font-size: 24px;
   font-weight: bold;
-  color: #ffffff;
+  color: #fff;
   transition: color 0.3s;
 }
 .futuristic-news-tmr .header-tmr .logo-tmr:hover {
@@ -2498,7 +2593,7 @@ button {
 .futuristic-news-tmr .header-tmr .navbar-tmr ul li {
   margin: 0 15px;
   cursor: pointer;
-  color: #ffffff;
+  color: #fff;
   transition: transform 0.3s;
 }
 .futuristic-news-tmr .header-tmr .navbar-tmr ul li:hover {
@@ -2531,13 +2626,13 @@ button {
 }
 .futuristic-news-tmr .content-tmr .article-card-tmr .article-title-tmr {
   font-size: 18px;
-  color: #ffffff;
+  color: #fff;
   padding: 10px;
   font-weight: bold;
 }
 .futuristic-news-tmr .content-tmr .article-card-tmr .article-description-tmr {
   padding: 0 10px 10px;
-  color: #ffffff;
+  color: #fff;
 }
 .futuristic-news-tmr .content-tmr .card-large-tmr {
   grid-column: span 2;
@@ -2550,7 +2645,7 @@ button {
   width: 100%;
   text-align: center;
   padding: 20px;
-  color: #ffffff;
+  color: #fff;
   background: rgba(0, 0, 0, 0.7);
   border-radius: 15px;
   box-shadow: 0 4px 20px rgba(0, 255, 255, 0.5);
@@ -2578,6 +2673,38 @@ button {
     grid-template-columns: 1fr;
   }
 }
+#end {
+  background: linear-gradient(45deg, #0a0f29, #1c1f2e, #2b2f35, #3b3f45, #1c1f2e);
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  color: #fff;
+}
+#end div {
+  width: 60%;
+  padding: 2rem 2em 10rem 2em;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+  transition: box-shadow 0.3s ease;
+  margin: 20vh auto;
+}
+#end div:hover {
+  box-shadow: 0 15px 40px rgba(255, 255, 255, 0.3);
+}
+#end p {
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+#end p:nth-of-type(1) {
+  transition-delay: opacity 1s;
+}
+#end p:nth-of-type(2) {
+  transition-delay: opacity 2s;
+}
+#end p:nth-of-type(3) {
+  transition-delay: opacity 3s;
+}
+
 /* display none for all */
 #year1991,
 #year1995,
@@ -2585,7 +2712,8 @@ button {
 #year2005,
 #year2010,
 #today,
-#morgen {
+#morgen,
+#end {
   display: none;
 }
 
