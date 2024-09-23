@@ -1950,7 +1950,7 @@ button {
 }
 
 /*  year 2010 ... ------ ___ ...................::,,,,,,,,,,,,,,,,, */
-.browser-header-b10, .browser-header-T-day {
+.browser-header-b10 {
   position: sticky;
   top: 0;
   z-index: 5;
@@ -2186,6 +2186,12 @@ button {
 }
 
 /* Today ------------------------------------------------------------.......................................-------------------- */
+.chrome24-browser {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
 .chrome24-browser {
   width: 100%;
   background: #2e2e2e;
@@ -2574,7 +2580,7 @@ button {
 .futuristic-news-tmr .header-tmr .logo-tmr {
   font-size: 24px;
   font-weight: bold;
-  color: #ffffff;
+  color: #fff;
   transition: color 0.3s;
 }
 .futuristic-news-tmr .header-tmr .logo-tmr:hover {
@@ -2587,7 +2593,7 @@ button {
 .futuristic-news-tmr .header-tmr .navbar-tmr ul li {
   margin: 0 15px;
   cursor: pointer;
-  color: #ffffff;
+  color: #fff;
   transition: transform 0.3s;
 }
 .futuristic-news-tmr .header-tmr .navbar-tmr ul li:hover {
@@ -2620,13 +2626,13 @@ button {
 }
 .futuristic-news-tmr .content-tmr .article-card-tmr .article-title-tmr {
   font-size: 18px;
-  color: #ffffff;
+  color: #fff;
   padding: 10px;
   font-weight: bold;
 }
 .futuristic-news-tmr .content-tmr .article-card-tmr .article-description-tmr {
   padding: 0 10px 10px;
-  color: #ffffff;
+  color: #fff;
 }
 .futuristic-news-tmr .content-tmr .card-large-tmr {
   grid-column: span 2;
@@ -2639,7 +2645,7 @@ button {
   width: 100%;
   text-align: center;
   padding: 20px;
-  color: #ffffff;
+  color: #fff;
   background: rgba(0, 0, 0, 0.7);
   border-radius: 15px;
   box-shadow: 0 4px 20px rgba(0, 255, 255, 0.5);

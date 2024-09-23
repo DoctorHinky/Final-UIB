@@ -25,14 +25,6 @@ $dark-gray: #333333;
 $light-gray: #f2f2f2;
 $hover-orange: #ffcc66;
 
-$border-color-b10: #d1d1d1;
-$header-bg-color-b10: #f1f1f1;
-$button-bg-color-b10: #ffffff;
-$content-bg-color-10: #ffffff;
-$shadow-color-b10: rgba(0, 0, 0, 0.2);
-$address-bar-bg-b10: #e3e3e3;
-$tab-bg-color-b10: #f1f1f1;
-
 $bg-dark-24: #2e2e2e;
 $bg-light-24: #3c3c3c;
 $bg-input-24: #4a4a4a;
@@ -40,6 +32,16 @@ $color-text-24: #e5e5e5;
 $border-radius-24: 8px;
 $icon-size-24: 16px;
 $font-size-24: 14px;
+
+$bg-color-tmr: rgba(0, 0, 0, 0.7);
+$glass-bg-tmr: rgba(255, 255, 255, 0.2);
+$border-color-tmr: rgba(255, 255, 255, 0.5);
+$hover-bg-tmr: rgba(255, 255, 255, 0.1);
+$shadow-color-tmr: rgba(0, 255, 255, 0.5);
+
+$bg-gradient-1-b-tmr: linear-gradient(to bottom, #ff7f50, #ff4500);
+$bg-gradient-2-b-tmr: linear-gradient(to bottom, #ff4500, #ff7f50);
+$bg-gradient-3-b-tmr: linear-gradient(to bottom, #ff8c00, #ff0000);
 
 @mixin flex-center {
   display: flex;

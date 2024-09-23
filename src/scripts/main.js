@@ -4,6 +4,8 @@ const sound2000 = new Audio("../assets/audio/win00.mp3");
 const sound2005 = new Audio("../assets/audio/winXP.mp3");
 const sound2010 = new Audio("../assets/audio/win7.mp3");
 const soundToday = new Audio("../assets/audio/win10.mp3");
+const soundMorgen = new Audio("../assets/audio/Morgen.mp3");
+const soundEnd = new Audio("../assets/audio/end.mp3");
 
 const year1991 = document.getElementById("year1991");
 const year1995 = document.getElementById("year1995");
@@ -103,6 +105,7 @@ function spawnToday() {
 }
 
 function spawnMorgen() {
+  soundMorgen.play();
   today.style.display = "none";
   morgen.style.display = "block";
 
@@ -115,6 +118,7 @@ function spawnMorgen() {
 }
 
 function spawnEnd() {
+  soundEnd.play();
   morgen.style.display = "none";
   end.style.display = "block";
 

@@ -1713,8 +1713,10 @@ $hover-color-b10: #005bb5; // Dunklerer Hover-Farbe für Links
 }
 
 /* Today ------------------------------------------------------------.......................................-------------------- */
-.browser-header-T-day {
-  @extend .browser-header-b10;
+.chrome24-browser {
+  position: sticky;
+  top: 0;
+  z-index: 5;
 }
 .chrome24-browser {
   width: 100%;
@@ -1874,7 +1876,7 @@ $max-width-t-day: 1200px;
       font-weight: bold;
 
       .nav-item-t-day {
-        padding: $padding-t-day / 2;
+        padding: calc($padding-t-day / 2);
         cursor: pointer;
         transition: color 0.3s;
 
@@ -1908,7 +1910,7 @@ $max-width-t-day: 1200px;
         .article-title-t-day {
           font-size: 1.5rem;
           color: $primary-color-t-day;
-          margin-bottom: $padding-t-day / 2;
+          margin-bottom: calc($padding-t-day / 2);
         }
 
         .article-content-t-day {
@@ -1926,7 +1928,7 @@ $max-width-t-day: 1200px;
 
       .ad-title-t-day {
         font-size: 1.5rem;
-        margin-bottom: $padding-t-day / 2;
+        margin-bottom: calc($padding-t-day / 2);
         color: $primary-color-t-day;
       }
 
@@ -1969,16 +1971,11 @@ $max-width-t-day: 1200px;
     }
 
     .advertisement-t-day {
-      padding: $padding-t-day / 2;
+      padding: calc($padding-t-day / 2);
     }
   }
 }
 /* MORGEN-  ------------------,,,,,,,,,,,,,,,,,,,,..............................------------------------------------,,,,,,,,,,,-.-.,-.,-.,-.,-.,-. */
-
-$bg-gradient-1-b-tmr: linear-gradient(to bottom, #ff7f50, #ff4500);
-$bg-gradient-2-b-tmr: linear-gradient(to bottom, #ff4500, #ff7f50);
-$bg-gradient-3-b-tmr: linear-gradient(to bottom, #ff8c00, #ff0000);
-$border-color-b-tmr: #fff;
 
 .browser-header-container-trm {
   position: sticky;
@@ -2013,7 +2010,7 @@ $border-color-b-tmr: #fff;
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    color: $border-color-b-tmr;
+    color: $white;
 
     .logo-b-tmr {
       font-size: 24px;
@@ -2035,7 +2032,7 @@ $border-color-b-tmr: #fff;
 
   .tab-bar-b-tmr {
     display: flex;
-    border-bottom: 2px solid $border-color-b-tmr;
+    border-bottom: 2px solid $white;
 
     .tab-b-tmr {
       padding: 10px 20px;
@@ -2065,7 +2062,7 @@ $border-color-b-tmr: #fff;
       input {
         flex: 1;
         padding: 10px;
-        border: 2px solid $border-color-b-tmr;
+        border: 2px solid $white;
         border-radius: 5px;
         margin-right: 10px;
         color: #000;
@@ -2088,7 +2085,7 @@ $border-color-b-tmr: #fff;
     .main-display-b-tmr {
       flex: 1;
       background: rgba(255, 255, 255, 0.9);
-      border: 1px solid $border-color-b-tmr;
+      border: 1px solid $white;
       border-radius: 5px;
       margin: 10px;
       padding: 20px;
@@ -2145,13 +2142,6 @@ $border-color-b-tmr: #fff;
 }
 
 /* CONTENT FOR TMR -.,-.,-.,-.,-.,-.,-.,-.,-.,-.,-.,-.,-.,-.,-.,-.,-.,-.,-.,-.,-.,-.,-.,-.,-.,-.,-.,-.-.-.,-.,-.,-.,-.,-.-.,-.,-.,-.,-., */
-// SCSS Variablen
-$bg-color-tmr: rgba(0, 0, 0, 0.7);
-$glass-bg-tmr: rgba(255, 255, 255, 0.2);
-$border-color-tmr: rgba(255, 255, 255, 0.5);
-$text-color-tmr: #ffffff;
-$hover-bg-tmr: rgba(255, 255, 255, 0.1);
-$shadow-color-tmr: rgba(0, 255, 255, 0.5);
 
 .outer-container-tmr {
   display: flex;
@@ -2184,7 +2174,7 @@ $shadow-color-tmr: rgba(0, 255, 255, 0.5);
     .logo-tmr {
       font-size: 24px;
       font-weight: bold;
-      color: $text-color-tmr;
+      color: $white;
       transition: color 0.3s;
 
       &:hover {
@@ -2199,7 +2189,7 @@ $shadow-color-tmr: rgba(0, 255, 255, 0.5);
       li {
         margin: 0 15px;
         cursor: pointer;
-        color: $text-color-tmr;
+        color: $white;
         transition: transform 0.3s;
 
         &:hover {
@@ -2238,14 +2228,14 @@ $shadow-color-tmr: rgba(0, 255, 255, 0.5);
 
       .article-title-tmr {
         font-size: 18px;
-        color: $text-color-tmr;
+        color: $white;
         padding: 10px;
         font-weight: bold;
       }
 
       .article-description-tmr {
         padding: 0 10px 10px;
-        color: $text-color-tmr;
+        color: $white;
       }
     }
 
@@ -2263,7 +2253,7 @@ $shadow-color-tmr: rgba(0, 255, 255, 0.5);
     width: 100%;
     text-align: center;
     padding: 20px;
-    color: $text-color-tmr;
+    color: $white;
     background: $bg-color-tmr;
     border-radius: 15px;
     box-shadow: 0 4px 20px $shadow-color-tmr;
