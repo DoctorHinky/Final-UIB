@@ -40,6 +40,7 @@ function spawn1991() {
 }
 function spawn1995() {
   year1991.style.display = "none";
+  sound1991.pause();
   sound1995.play();
 
   year1995.style.display = "block";
@@ -53,6 +54,7 @@ function spawn1995() {
 
 function spawn2000() {
   year1995.style.display = "none";
+  sound1995.pause();
   sound2000.play();
 
   year2000.style.display = "block";
@@ -68,6 +70,7 @@ function spawn2000() {
 
 function spawn2005() {
   year2000.style.display = "none";
+  sound2000.pause();
   sound2005.play();
 
   year2005.style.display = "block";
@@ -76,6 +79,7 @@ function spawn2005() {
 
 function spawn2010() {
   year2005.style.display = "none";
+  sound2005.pause();
   sound2010.play();
 
   year2010.style.display = "block";
@@ -91,6 +95,7 @@ function spawn2010() {
 
 function spawnToday() {
   year2010.style.display = "none";
+  sound2010.pause();
   soundToday.play();
 
   today.style.display = "block";
@@ -105,6 +110,8 @@ function spawnToday() {
 }
 
 function spawnMorgen() {
+  soundToday.pause();
+
   soundMorgen.play();
   today.style.display = "none";
   morgen.style.display = "block";
@@ -118,6 +125,7 @@ function spawnMorgen() {
 }
 
 function spawnEnd() {
+  soundMorgen.pause();
   soundEnd.play();
   morgen.style.display = "none";
   end.style.display = "block";
