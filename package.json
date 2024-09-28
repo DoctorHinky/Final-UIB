@@ -7,7 +7,7 @@
     "sass-watch": "sass --watch src/styles/scss/main.scss:src/styles/main.css",
     "start": "live-server src/pages/timetravel.html",
     "all": "run-p start sass-watch",
-    "copy": "rm -r dist && mkdir dist && cp -r src dist",
+    "copy": "rm -r dist && mkdir dist && cp -r src/* dist",
     "publish": "gh-pages -d dist"
   },
   "keywords": [
